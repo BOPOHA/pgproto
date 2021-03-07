@@ -169,10 +169,10 @@ func readRawMessage(r io.Reader) (rawmsg []byte, err error) {
 		return nil, err
 	}
 	rawPkgLen, err := ReadNBytes(r, 4)
-	pkgLen := bytesToInt(rawPkgLen)
 	if err != nil {
 		return nil, err
 	}
+	pkgLen := bytesToInt(rawPkgLen)
 	payload, err := ReadNBytes(r, pkgLen-4)
 	if err != nil {
 		return nil, err
