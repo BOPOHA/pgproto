@@ -13,7 +13,7 @@ func (s *SASLResponse) server() {}
 //Byten SASL mechanism specific message data.
 
 func (s *SASLResponse) Encode() []byte {
-	// 'p' [int32 - length] []byte \0
+	// 'p' [int32 - length] []byte
 	w := newWriteBuffer()
 	w.WriteBytes(s.Message)
 	w.Wrap('p')
