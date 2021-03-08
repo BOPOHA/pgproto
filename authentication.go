@@ -165,7 +165,7 @@ func (a *AuthenticationRequest) AsMap() map[string]interface{} {
 			"Salt":            a.Salt,
 			"ScramSHA256":     a.SupportedScramSHA256,
 			"ScramSHA256Plus": a.SupportedScramSHA256Plus,
-			"Message":         string(a.Message),
+			"Message":         a.Message,
 		},
 	}
 }
